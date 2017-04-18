@@ -16,7 +16,7 @@ export class AppComponent {
 		Observable
 			.from(newString)
 			.map(x => x.toLowerCase())
-			.filter(x => x.toLowerCase() === 'd' || x.toLowerCase() === 'l')
+			.filter(x => x === 'd' || x === 'l')
 			// add if different from the last or different from the second to last
 			.reduce((x, y) => ((x[x.length - 1] !== y) || (x.length > 1 && x[x.length - 2] !== y)) ? x + y : x)
 			.subscribe(x => {
