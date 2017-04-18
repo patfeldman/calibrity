@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+	<h1>Calibrity Light Bulb Challenge</h1>
+		<div class="form-group">
+			<label for="string">String to test</label>
+			<input [(ngModel)]="testString" (ngModelChange)="UpdateAnswer($event)" type="text" class="form-control" id="string"  required>
+		</div>
+	<div class="answer">
+		{{ answer }}
+	</div>
+</div>
